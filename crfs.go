@@ -228,6 +228,7 @@ func (n *rootNode) Lookup(ctx context.Context, name string) (fspkg.Node, error) 
 
 func setDirAttr(a *fuse.Attr) {
 	a.Mode = 0755 | os.ModeDir
+	a.Size = uint64(0)
 	// TODO: more?
 }
 
